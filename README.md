@@ -2,7 +2,12 @@
 # Predicting Spotify Song Hits Using Machine Learning
 
 ## Executive Summary
-This project uses Kaggle’s [Spotify Tracks Attributes and Popularity](https://www.kaggle.com/datasets/melissamonfared/spotify-tracks-attributes-and-popularity/data) dataset to test if a a supervised machine learning classification model can reliably predict song hits using attributes of the song. Reliability was defined as achieving an F1 score ≥ 0.7. A hit was defined as a popularity score ≥ 70.
+This project uses Kaggle’s [Spotify Tracks Attributes and Popularity](https://www.kaggle.com/datasets/melissamonfared/spotify-tracks-attributes-and-popularity/data) dataset to test if a supervised machine learning classification model can reliably predict song hits using attributes of the song. Reliability was defined as achieving an F1 score ≥ 0.7. A hit was defined as a popularity score ≥ 70.
+
+Six models were compared:
+- Logistic Regression (RUS and Weighted)
+- Random Forest (RUS and Weighted)
+- XGBoost (RUS and Weighted)
 
 **The best-performing model was XGBoost (Weighted) with:**
 - **ROC AUC:** 0.87
@@ -69,10 +74,12 @@ Feature selection was based on Mutual Information (MI) and Point Biserial Absolu
 Multicollinearity was ruled out for numerical features using a Pairwise Correlation Matrix. Future work should explore multicolinearity between categorical features.
 ![Pairwise Correlation Matrix](Visuals/multicollinearity_heatmap.png)
 
-### Models Tested:
-- Logistic Regression (RUS and Weighted)
-- Random Forest (RUS and Weighted)
-- XGBoost (RUS and Weighted)
+### Model Testing:
+- Model benchmark table
+<img width="940" height="201" alt="image" src="https://github.com/user-attachments/assets/2be5d661-e803-4f7f-b19c-18ebaafffbb1" />
+
+XGBoost Weighted performed best because its gradient boosting handles complex feature interactions, while class weighting improves balance without losing data, giving the highest ROC AUC and lowest Brier score.
+XGBoost and Logistic Regression beat Random Forest because they provide better probability calibration and handle imbalance more effectively, while Random Forest struggled with severe class imbalance and produced poorer AUC and calibration.
 
 **Best Model:** XGBoost (Weighted) – high recall, low precision.
 
