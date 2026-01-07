@@ -100,6 +100,6 @@ XGBoost and Logistic Regression beat Random Forest because they provide better p
 ## Future Improvements
 - Adjust classification threshold to improve precision.
 - Hyperparameter tuning for XGBoost.
-- Explore cultural context for popularity metrics. Potentially design one model for top 10 coutries based on their total spotify downloads. This fixes would suit each model to their cultures, enabling national marketing campaign support.
+- Explore cultural context for popularity metrics. Potentially design one model for top 10 coutries based on their total spotify downloads. This would suit each model to their cultures, enabling national marketing campaign support.
 
   
