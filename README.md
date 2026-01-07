@@ -42,6 +42,9 @@ Colab was chosen for its free, accessible environment and ease of sharing. Pytho
 ---
 
 ## Data Visualisation & Dashboards
+
+Excluding the “Distribution of Track Popularity” visual, distinct colours were used to enhance accessibility for colour-blind viewers – although the exception visual is still accessible due to the combination of a line and bars, which are distinct, despite their identical colour. Charts are also static and mostly simple to interpret, although guidance is provided in descriptions of violin plots where needed, reducing cognitive load.
+
 Key visuals:
 - The bar plot and histogram below visualised severe class imbalance (108528 songs were not hits; 5472 were) and that popularity is skewed towards lower scores, supporting rapid understanding, of the need for imbalance handling, for portfolio viewers.
 ![Class Imbalance](Visuals/eda_class_balance_hit.png)
@@ -78,6 +81,7 @@ Multicollinearity was ruled out for numerical features using a Pairwise Correlat
 - Model benchmark table
 <img width="940" height="201" alt="image" src="https://github.com/user-attachments/assets/2be5d661-e803-4f7f-b19c-18ebaafffbb1" />
 
+
 XGBoost Weighted performed best because its gradient boosting handles complex feature interactions, while class weighting improves balance without losing data, giving the highest ROC AUC and lowest Brier score.
 XGBoost and Logistic Regression beat Random Forest because they provide better probability calibration and handle imbalance more effectively, while Random Forest struggled with severe class imbalance and produced poorer AUC and calibration.
 
@@ -94,6 +98,6 @@ XGBoost and Logistic Regression beat Random Forest because they provide better p
 ## Future Improvements
 - Adjust classification threshold to improve precision.
 - Hyperparameter tuning for XGBoost.
-- Explore cultural context for popularity metrics.
+- Explore cultural context for popularity metrics. Potentially design one model for top 10 coutries based on their total spotify downloads. This fixes would suit each model to their cultures, enabling national marketing campaign support.
 
   
