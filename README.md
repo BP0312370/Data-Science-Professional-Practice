@@ -4,7 +4,7 @@
 ## Executive Summary
 This project uses Kaggle’s [Spotify Tracks Attributes and Popularity](https://www.kaggle.com/datasets/melissamonfared/spotify-tracks-attributes-and-popularity/data) dataset to test if a supervised machine learning classification model can reliably predict song hits using attributes of the song. Reliability was defined as achieving an F1 score ≥ 0.7. A hit was defined as a popularity score ≥ 70.
 
-Six models were compared:
+I compared six models, to explore model-suitability for the task:
 - Logistic Regression (RUS and Weighted)
 - Random Forest (RUS and Weighted)
 - XGBoost (RUS and Weighted)
