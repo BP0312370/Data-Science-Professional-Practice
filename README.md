@@ -42,8 +42,8 @@ Key visuals:
 - Violin plots for numeric features
 - Stacked bar plots for categorical features
 
-![Class Imbalance](Visuals/class_imbalance.png)
-![Feature Ranking](Visuals/feature_ranking.png)
+![Class Imbalance](Visuals/eda_class_balance_hit.png)
+![Feature Ranking](Visuals/feature_ranking_clustered_bar_chart.png)
 
 See more in the `Visuals/` folder.
 
