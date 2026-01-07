@@ -18,6 +18,8 @@ I compared six models, to explore model-suitability for the task:
 
 The model is excellent at identifying most “hit” songs (high recall) and has a high ROC AUC, meaning it is effective at distinguishing between “hit” and “not hit” tracks. However, it tends to over-predict hits, leading to many false positives (low precision). This approach is suitable for advertising agencies or managers targeting a global audience, because global popularity metrics align with worldwide trends. It is less suitable for national campaigns, as cultural and language differences mean globally popular songs may not be locally popular. Ethically, this limitation should be clearly communicated to manage expectations.
 
+See full code in the `Notebooks/` folder.
+
 ---
 
 ## Data Infrastructure & Tools
